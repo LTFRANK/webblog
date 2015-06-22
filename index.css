@@ -1,0 +1,91 @@
+html,body { height: 100%;}
+body { background-image: url(../img/black_bg.jpg); }
+
+ul { padding: 0;}
+li { list-style: none;}
+a { color: #555;}
+
+.row { height: 100%;  margin: 0;}
+
+#header { background: url(../img/black_header.jpg); }
+
+#header .thumbnail { background: none; border: none; }
+#header .thumbnail img { width: 60%; margin-top: 40px; border: 10px solid #333; border-radius: 50%; -webkit-transition: all 200ms;
+-moz-transition: all 200ms;
+-ms-transition: all 200ms;
+-o-transition: all 200ms;
+transition: all 200ms;}
+#header .thumbnail img:hover { border-radius: 10px; }
+#header .thumbnail h1 { color: #8B8B8B; font-size: 30px; color:#fff; text-shadow:2px 2px 4px #000; -webkit-transition: all 1s;
+-moz-transition: all 1s;
+-ms-transition: all 1s;
+-o-transition: all 1s;
+transition: all 1s;}
+#header .thumbnail h1:hover{ color:rgba(0,0,0,0); text-shadow:0 0 100px rgba(0,0,0,0.5); }
+#header .thumbnail p { color: #777; }
+#header a { color: #fff; padding: 3px 5px;}
+#header .active a { background-color: #222;}
+#header a:hover { background-color: #222;}
+
+#example-navbar-collapse { padding: 0;}
+#nav  { background-color: transparent ; border-color: transparent;}
+
+#header_side { background: url(../img/black_nav.png)0 0  repeat-y; position: absolute; top: 0; right: 0; z-index: 10; text-align: center;
+ width: 64px; height: 100%; font-size: 13px; line-height: 24px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+#content { padding: 40px 0 0 0;}
+
+.arrow{ height: 36px; margin: 20px auto; background: url(../img/mento.png) center center no-repeat;}
+
+.meta { font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","\5FAE\8F6F\96C5\9ED1"; font-size: 12px;
+line-height: 22px;  padding: 0 20px; width: 100%; display: inline-block;  -webkit-box-sizing: border-box;
+-moz-box-sizing: border-box; box-sizing: border-box; }
+.meta li:nth-of-type(3) { float: right; padding: 0;}
+
+.panel { -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33); -moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33); box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);}
+
+.panel,.panel-heading,.panel-body,.panel-footer {  background-image: url(../img/black_post.jpg); border: none; }
+ { background-image: url(../img/black_post.jpg);}
+
+#content .panel-heading {border-left: solid 4px #BB2020;}
+
+.panel-heading { font-size: 20px; font-weight: bold; }
+.panel-heading a { color: #4D4D46;}
+.panel-heading a:hover { color: #333}
+
+.panel-body { background: url(../img/black_line3.jpg) repeat-x; overflow: auto; }
+.panel-body img { max-width: 100%;}
+
+.panel-footer { padding: 0; border-top: }
+.panel-footer ul { overflow: hidden; margin: 0; padding: 0 20px; border-top: solid 1px #B19C78; color: #555;}
+.panel-footer li { float: left; padding-right: 15px;}
+
+#pagination_wrap { text-align: center;}
+#pagination { background-image: url(../img/black_post.jpg); border: none;}
+.pagination>.disabled>a,.pagination>li>a, .pagination>li>span { background-color: transparent; color: #555 }
+
+#side { background: rgba(255,255,255,0.3) url(../img/black_line2.png) top left repeat-y; padding-top: 40px;}
+label { width: 100%;}
+#side h4 { width: 100%; color: #555; background: url(../img/net.png) top left repeat; border-bottom: dashed 1px #555; font-weight: bold; padding: 8px ; margin: 0; }
+
+#search,#contact { margin-bottom: 40px;}
+
+#sort li { color: #555; border-bottom: dashed 1px #3A3A3A; padding: 5px 0 0 2px; line-height: 24px;}
+#sort li:hover { background: rgba(0,0,0,0.1); }
+#sort li span{ font-size: 10px; color: #666;}
+#sort li a { color: #666;}
+
+
+
+@media screen and (min-width:768px){
+	#header { position: fixed; top: 0; left: 0;}
+	#side {position:fixed; top: 0; right: 0;}
+	#content_wrap,#content_wrap_nav,#content_wrap_special,#content_wrap_about,#content_wrap_message,#content_wrap_pro { margin-left: 33%; }
+	#header>div { margin-right: 64px;  }
+	.row>div { height: 100%; padding: 0;}
+}
+
+@media screen and (min-width:992px){
+	#content_wrap,#content_wrap_nav,#content_wrap_special,#content_wrap_about,#content_wrap_message,#content_wrap_pro { margin-left: 25%;}
+}
+

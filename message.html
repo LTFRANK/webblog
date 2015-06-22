@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+ <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Document</title>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="ajax.js"></script>
+<style type="text/css">
+
+.total{
+	padding: 10px 5px 0;
+
+}
+strong{
+	font-size:18px;
+	font-style: normal;
+	color:#6e6e6e;
+}
+.postcontent{
+	padding: 5px;
+	height: 150px;
+	overflow: hidden;
+
+}
+.uface{width: 48px;height: 48px;background: url(uface.jpg) no-repeat;background-size: 100% 100%;}
+.postcontent img{
+	width: 48px;
+	height: 48px;
+}
+.message{
+	padding: 0 0 0 31px;
+	width:63%;
+	height:90px;
+	float: left;
+	position: relative;
+}
+textarea{
+	width: 97%;
+	height: 90px;
+	box-shadow: inset 0px 0px 5px 2px rgba(0,0,255,0.3);
+	
+}
+#btnadd{
+	position: relative;
+}
+#btn_post{
+	padding: 2px;
+	border: none;
+	font-size: 18px;
+	color:white;
+	background-color: rgba(97,121,255,0.8);
+	cursor:pointer;
+	border-radius: 3px;
+}
+.uname{
+	margin-bottom: 5px;
+	font-size: 16px;
+	color:#e8e3e3;
+}
+input[type=text]{
+	width:33%;
+	padding: 2px 0;
+}
+#post_view{
+	height: 100%;
+	padding:20px 0px 0;
+	background: -webkit-linear-gradient(top,#d5d0bd,#dbd6c3);
+	
+}
+#post_view img{
+	width: 48px;
+	height: 48px;
+}
+#post_view>li{
+	
+	width: 100%;
+	height: 180px;
+	margin: 5px 0;
+	border-bottom: 1px dashed #6e6e6e;
+	overflow:hidden;
+	zoom: 1;
+
+}
+.pane_body h3{
+	padding:0 5px;
+	border-bottom: 2px solid #ffffff;
+}
+.user_inform ul li{
+	width: 100%;
+	float: left;
+	word-break:break-all; 
+	overflow:auto
+
+}
+.user_inform strong{
+	font-size: 14px;
+}
+.user_inform span{
+	
+	font-size: 14px;
+}
+.user_inform a{
+	margin-left: 5px;
+}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<div id="nav" class="fl clear">
+			<div class="row fl">
+				<div id="col1">
+					<img src="ltf.png" alt="..." id="headimg">
+					<h2>刘天福</h2>
+					<p>web前端开发工程师</p>
+					<div id="btnwrap">
+						<input type="button" id="hbtn">
+					</div>
+					
+					<div id="nav_view">
+						<ul>						
+							<li><a href="blog.html" >首页</a></li>
+							<li><a href="nav.html">导航</a></li>
+							<li><a href="speacil.html">专题</a></li>
+							<li><a href="production.html">作品</a></li>
+							<li><a href="about.html">关于</a></li>
+							<li><a href="message.html">留言</a></li>
+						</ul>
+
+					</div>
+				</div>
+				
+			</div>
+			<div class="slider fl">
+			</div>
+		</div>
+		
+		<div id="content" class="fl">
+			<ul class="ul_content">
+				<li>
+					<div class="pane">
+						<div class="pane_head">
+							<span>留言</span>
+						</div>
+						<div class="pane_body">
+							<div class="total"><strong>总共有<span></span>人评论，<span></span>人参与</strong></div>
+							<div class="postcontent">
+								<div class="uname">游客昵称：<input type="text"placeholder="呢称" id="btn_name"><input type="button" value="发表" id="btn_post"></div>
+								<div class="uface fl">
+									<img src="uface.jpg" alt="...">
+								</div>
+								<div class="message">
+									<textarea name="" id="pcont"  placeholder="我想说....."></textarea>	
+								</div>
+							</div>
+							<h3>留言信息</h3>
+							<ul id="post_view">
+								<li>
+									<div class="uface fl">
+									</div>
+									<div class="user_inform">
+										<ul>
+											<li><strong>gggggg</strong><span>12:30</span></li>
+											<li><span>啊啊啊</span></li>
+											<li><a href="###">顶</a><a href="###">0</a>&nbsp;&nbsp;<a href="###">回复</a></li>
+										</ul>	
+									</div>
+									
+								</li>
+							</ul>
+						</div>	
+				</li>
+			</ul>
+		</div>
+		
+		<div id="aside" class="fl">
+			<div id="search">
+				<h2 class="search_h2">搜索</h2>
+				<input type="text"  placeholder="search" >
+			</div>
+			<div id="contact">
+				<h2 class="search_h2">联系我</h2>
+				
+				<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=675020659&amp;site=qq&amp;menu=yes" target="_blank"><img src="qq.png" alt="腾讯QQ">
+				</a>
+			</div>
+			<div id="note">
+				<h2 class="search_h2">分类导航</h2>
+				<ul id="notekind">
+					<li><span></span><a href="###">前端开发()</a></li>
+					<li><span></span><a href="###">学习笔记()</a></li>
+					<li><span></span><a href="###">日志杂谈()</a></li>
+					<li><span></span><a href="###">资源工具()</a></li>
+					<li><span></span><a href="###">其他资料()</a></li>
+				</ul>
+
+			</div>
+			
+		</div>
+	
+	</div>
+</body>
+<script type="text/javascript"  src="jquery-2.1.3.min.js"></script>
+<script type="text/javascript"  src="touch.js"></script>
+<script type="text/javascript">
+
+		var ourl=window.location.href;
+
+		ourl=ourl.split("/");
+		ourl=ourl[ourl.length-1];
+		ourl=ourl.split("#")[0];
+		ourl=ourl.split("?")[0];
+
+		var anav=$("#nav_view ul li a");
+
+		switch(ourl)
+		{
+			case 'blog.html':
+					for (var i = 0; i < anav.length; i++) {
+						anav[i].style.backgroundColor="";
+					};
+					anav[0].style.backgroundColor="#222222";break;
+			case 'nav.html':
+			for (var i = 0; i < anav.length; i++) {
+						anav[i].style.backgroundColor="";
+					};
+					anav[1].style.backgroundColor="#222222";break;
+			case 'speacil.html':
+			for (var i = 0; i < anav.length; i++) {
+						anav[i].style.backgroundColor="";
+					};
+					anav[2].style.backgroundColor="#222222";break;
+			case 'production.html':
+			for (var i = 0; i < anav.length; i++) {
+						anav[i].style.backgroundColor="";
+					};
+					anav[3].style.backgroundColor="#222222";break;
+			case 'about.html':
+			for (var i = 0; i < anav.length; i++) {
+						anav[i].style.backgroundColor="";
+					};
+					anav[4].style.backgroundColor="#222222";break;
+			case 'message.html':
+			for (var i = 0; i < anav.length; i++) {
+						anav[i].style.backgroundColor="";
+					};
+					anav[5].style.backgroundColor="#222222";break;
+
+
+		}
+
+
+
+
+		window.onresize=function(){
+			var clientWidth=document.body.clientWidth||document.documentElement.clientWidth;
+            var navWidth=$("#nav").width();
+			if(clientWidth<=980)
+			{
+				$("#aside").css({
+					display:"none"
+				})
+			}
+			else{
+				$("#aside").css({
+					display:"block"
+				})
+			}
+
+			if (clientWidth<=762) {
+				$("#nav_view").css({
+					display:"none",
+					height:0
+				})
+			}else{
+				$("#nav_view").css({
+					display:"block",
+					height:100+"%"
+				})
+			}
+
+		}
+
+		$(function(){
+			var bol=true;
+			$("#hbtn").on("click",function(){
+
+				if (bol) {
+					$("#nav_view").css({
+					display:"block",
+					height:100+"%"
+					
+						})
+					$("#btnwrap").css({borderBottom:1+"px"+" "+"solid"+" "+"#ffffff"})
+					bol=false;
+				}else{
+					$("#nav_view").css({
+					display:"none",
+					height:0
+						})
+					$("#btnwrap").css({borderBottom:"none"})
+					bol=true;
+				}		
+		})
+	})
+
+			//评论
+			$("#btn_post").on("click",function(){
+				if($(this).prev().val()&& $("#pcont").val())
+				{	
+					$.ajax({
+						type:"GET",
+						url:"http://localhost/blog/php/insert.php",
+						data:"name="+$(this).prev().val()+"&content="+$("#pcont").val(),
+						success:function(data){	
+							var json=JSON.parse(data);
+
+							var oul=$('<li>'+
+									'<div class="uface fl">'+
+									'</div>'+
+									'<div class="user_inform">'+
+										'<ul>'+
+											'<li><strong>'+$(this).prev().val()+'</strong><span>'+json.time+'<'+
+											'/span></li>'+
+											'<li><span>'+$("#pcont").val()+'</span></li>'+
+											'<li><a href="###">顶</a><a href="###">0</a>&nbsp;&nbsp;'+ 
+											'<a href="###">回复<'+
+											'/a></li>'+
+										'</ul>'+	
+									'</div>'+
+								'</li>')
+							$("#post_view").prepend(oul);
+							$(this).prev().val("");
+							$("#pcont").val("");
+								}
+
+					})
+					
+					
+				}
+
+					fnpost();
+			
+			})
+				var lioffsetheight=$("#post_view li").height();
+				var bol=true;
+
+				fnpost();
+				function fnpost(){
+					var bolding=true;
+					$(".user_inform ul li").find("a:nth-child(1)").on("click",function(){
+						var num=$(this).next().html();
+						if(bolding==true)
+						{		
+							num++;
+							$(this).next().html(num);
+							bolding=false;
+							$(this).html("取消顶")
+						}
+						else{
+							num--;
+							$(this).next().html(num);
+							$(this).html("顶")
+							bolding=true;
+						}
+						
+					})
+					$(".user_inform ul li").find("a:nth-child(3)").on("click",function(){
+
+					if(bol)
+					{
+						var adiv=$('<div class="postcontent">'+
+								'<div class="uname">游客昵称：<input type="text"placeholder="呢称" '+
+								'class="replay_name"><input type="button" value="评论" class="btn_replay"><input type="button" value="退出" class="btn_exit"></div>'+
+								'<div class="uface fl">'+
+									'<img src="uface.jpg" alt="...">'+
+								'</div>'+
+								'<div class="message">'+
+								'<textarea name="" class="replay_content"  placeholder="我想说....."></textarea>'+	
+								'</div>'+
+							'</div>')
+						var postheight=$(".postcontent").height();
+						var liheight=$(this).parent().parent().parent().parent().height();
+						$(this).parent().parent().parent().parent().css({
+							height:liheight+postheight
+						})
+						$(this).parent().parent().parent().parent().append(adiv);
+						
+						bol=false;
+
+						$(".btn_replay").on("click",function(){
+							var changeheight=$(this).parent().parent().parent().height();
+							var newheight=changeheight-postheight;	
+							$(this).parent().parent().parent().css({height:newheight});
+
+
+							var replay_name=$(this).prev().val();
+							var replay_content=$(this).parent().parent().find(".replay_content").val();
+
+							var replayline=$('<div class="replay_line fl" style="width:100%;margin:0 5px">'+
+											'<p><span style="background:url(uface.jpg) no-repeat;background-'+'size:100% 100%;display:inline-'+
+											'block;width:24px;height:24px;"></span><strong'+
+											' style="color:blue;font-size:16px;">'+replay_name+'</strong><'+
+											'span style="margin:0 10px;">回复</span></p>'+
+											'<p><strong style="color:#666666;font-size:16px;">'+replay_content+'<'+
+											'/strong></p>'+
+										'</div>')
+								bol=true;	
+							$(this).parent().parent().parent().append(replayline);
+								
+
+							var replay_lineheight=$(".replay_line").height();
+							$(this).parent().parent().parent().css({height:newheight+replay_lineheight});
+							$(this).parent().parent().remove();
+						})					
+					$(".btn_exit").on("click",function(){
+					var exitheight=$(this).parent().parent().parent().height();
+					$(this).parent().parent().parent().css({height:exitheight-postheight})
+					$(this).parent().parent().remove();
+					bol=true;
+					})
+					}
+				})		
+				}	
+		
+</script>
+</html>

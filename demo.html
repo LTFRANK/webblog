@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style type="text/css">
+*{margin: 0;padding: 0;}
+
+ul,li{
+	list-style: none;
+}
+		#wrap{
+			width: 500px;
+			height: 300px;
+			margin: 100px auto;
+			background-color: green;
+			position: relative;
+			overflow:  hidden;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: #ccc;
+			float:left;
+			margin:50px 20px;
+		}
+		#boxwrap{
+			height: 300px;
+			width:2000%;
+			overflow:  hidden;
+			position: relative;
+			left: 0;
+			top: 0;
+			line-height: 300px;
+		}
+
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<ul id="boxwrap"></ul>
+	</div>
+</body>
+<script type="text/javascript">
+	
+	window.onload=function(){
+
+		var boxwrap=document.getElementById('boxwrap');
+		var wrap=document.getElementById('wrap');
+
+		for (var i = 0; i <20; i++) {
+			var li=document.createElement("li");
+			li.className="box";
+			li.innerHTML=i;
+			boxwrap.appendChild(li);
+		};
+		var bol=true;
+		var abox=boxwrap.getElementsByTagName('li');
+		var owidth=abox[0].offsetWidth;
+		document.onmousedown=function(e){
+
+			bol=true;
+
+			var e=event||window.event;
+			var oldx=e.clientX;
+
+			var iwidth=boxwrap.offsetLeft;
+		
+			wrap.onmousemove=function(e){
+				if(bol==true)
+				{
+				var e=event||window.event;
+				var newx=e.clientX;
+				var changex=newx-oldx;
+				if(changex>0)
+				{	
+					var change=iwidth-owidth-20;
+					
+					boxwrap.style.left=change+"px";
+				}
+				else{
+					var change2=iwidth+owidth+20;
+					boxwrap.style.left=change2+"px";
+				}
+				
+				bol=false;
+
+				}
+
+			}
+			document.onmouseup=function(e){
+					bol=false;
+			}
+
+			return false;
+		}
+
+	}
+
+
+</script>
+</html>
